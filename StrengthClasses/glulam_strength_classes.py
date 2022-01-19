@@ -2,11 +2,12 @@
 Database with Glulam strength classes according to EN 14080
 """
 
-def glulam(glulam_strength_classes, glulam_class):
-	"""
-	tuple with values of the glulam_class chosen
-	Available classes: 'GL20h', 'GL22h', 'GL24h', 'GL26h', 'GL28h', 'GL30h', 'GL32h', 'GL20c', 'GL22c', 'GL24c', 'GL26c', 'GL28c', 'GL30c', 'GL32c'
-	"""
+def glulam(glulam_class):
+    """
+    Return a tuple with values of the glulam_class chosen.
+    Available classes: 'GL20h', 'GL22h', 'GL24h', 'GL26h', 'GL28h', 'GL30h', 'GL32h', 'GL20c', 'GL22c', 'GL24c', 'GL26c', 'GL28c', 'GL30c', 'GL32c'
+    """
+    global glulam_strength_classes
     return tuple(glulam_strength_classes[glulam_class].values())
     
 glulam_strength_classes = {
